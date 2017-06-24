@@ -58,7 +58,8 @@ Par exemple, s'il y a cinq travaux, __CV__, CSS Zen Garden (__CSSZG__), Artiste 
 
 2. La cote finale est la moyenne pondérée des cotes moyennes pour chaque travail. 
 Par exemple, si on a décidé que le __CV__, __CSSZG__, __ART__ valaient chacun pour 10% des points, __PF__ pour 20% des points, __CR__ pour 30% des points et __EG__ pour 20% des points, la cote finale sera calulée comme suit :
-__COTE__ = 0.1 * __CV__ + 0.1 * __CSSZG__ + 0.1 * __ART__ + 0.2 * __PF__ + 0.3 * __CR__ + 0.2 * __EG__
+    
+    - __COTE__ = 0.1 * __CV__ + 0.1 * __CSSZG__ + 0.1 * __ART__ + 0.2 * __PF__ + 0.3 * __CR__ + 0.2 * __EG__
 
 #### En plus
 
