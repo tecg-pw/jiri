@@ -41,6 +41,12 @@ Route::get('/events/{event}/weights', function (\Jiri\Event $event) {
 Route::get('/events/{event}/performances', function (\Jiri\Event $event) {
     return $event->performances;
 });
+Route::get('/events/{event}/students', function (\Jiri\Event $event) {
+    return $event->students;
+});
+Route::get('/events/{event}/users', function (\Jiri\Event $event) {
+    return $event->users;
+});
 
 // Implementations
 Route::get('/implementations', function () {

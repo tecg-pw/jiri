@@ -33,6 +33,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Query\Builder|\Jiri\Event withTrashed()
  * @method static \Illuminate\Database\Query\Builder|\Jiri\Event withoutTrashed()
  * @mixin \Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Jiri\Student[] $students
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Jiri\User[] $users
  */
 class Event extends Model
 {
@@ -75,6 +77,16 @@ class Event extends Model
     public function performances()
     {
         return $this->hasMany(Performance::class);
+    }
+
+    public function students()
+    {
+        return $this->belongsToMany(Student::class, 'meetings')->distinct('student_id');
+    }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'meetings')->distinct('user_id');
     }
 
 }
