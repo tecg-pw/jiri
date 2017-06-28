@@ -63,7 +63,7 @@ La cote finale de l’étudiant se calcule en deux étapes :
     - __ART__ = (__ART__ du jury2 + __ART__ du jury3 + __ART__ du jury5 + __ART__ du jury6) / 4
     - __PF__ = (__PF__ du jury2 + __PF__ du jury3 + __PF__ du jury4 + __PF__ du jury6 + __PF__ du jury7) / 5
     - __CR__ =(__CR__ du jury1 + __CR__ du jury2 + __CR__ du jury4 + __CR__ du jury5 + __CR__ du jury6 + __CR__   du jury7) / 6
-    - __EGmoy__ = (__EG__ du jury1 + __EG__ du jury2 + __EG__ du jury3 + __EG__ du jury4 + __EG__ du jury5 + __EG__ du jury6 + __EG__ du jury7 ) / 7
+    - __EG__ = (__EG__ du jury1 + __EG__ du jury2 + __EG__ du jury3 + __EG__ du jury4 + __EG__ du jury5 + __EG__ du jury6 + __EG__ du jury7 ) / 7
 
 2. La cote finale est la moyenne pondérée des cotes moyennes pour chaque travail. Par exemple, si on a décidé que le __CV__, __CSSZG__, __ART__ valaient chacun pour 2/20 des points, __PF__ pour 4/20 des points, __CR__ pour 6/20 des points, il reste 4/20 des points __EG__ et la cote finale sera calulée comme suit :
     
