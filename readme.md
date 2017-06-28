@@ -8,7 +8,7 @@ Chaque année, des intervenants externes sont invités à venir rencontrer les �
 
 Jusqu’à ce jour, la procédure habituelle a consisté à donner aux membres du jury des feuilles reprenant chacune le nom d’un étudiant, son heure de passage, le nom du jury et la liste des réalisations, et à leur demander de noter, pour chaque réalisation, une cote et des commentaires. Ils notent également sur ces feuilles un commentaire global et une cote globale concernant le profil et le niveau de compétence de l’étudiant tel qu’ils l’ont perçu à travers les réalisations examinées. À la fin de la journée, à l’aide de ces notes, les membres du jury délibèrent pour obtenir un consensus sur les qualités des travaux de chaque étudiant et en tirer une cote finale.
 
-Vous pouvez voir, en suivant les liens suivants, divers exemples des documents concernés :
+Vous pouvez voir, en suivant les liens suivants, divers exemples des documents concernés, tels qu’utilisés cette année au jury de Design Web B2 de première session :
 
 - [la feuille des ordres de passage à découper et à distribuer aux membres du jury et aux étudiants](https://docs.google.com/document/d/1prWdLEWeBah6CLL3XwAI4ohCylqM7SlbwvDnlsdnmgk/edit?usp=sharing) ;
 - [la feuille de cotation remise à un membre du jury pour qu’il puisse évaluer les travaux d’un étudiant](https://docs.google.com/document/d/1m8Y-Yek-yei3goAIm5l9lqY0NftNhIKUmKXiiZU-3UI/edit?usp=sharing) ;
