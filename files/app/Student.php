@@ -17,6 +17,19 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Query\Builder|\Jiri\Student withoutTrashed()
  * @mixin \Eloquent
  * @property-read \Illuminate\Database\Eloquent\Collection|\Jiri\Performance[] $performances
+ * @property int $id
+ * @property \Carbon\Carbon|null $created_at
+ * @property \Carbon\Carbon|null $updated_at
+ * @property \Carbon\Carbon|null $deleted_at
+ * @property string $name
+ * @property string $email
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Jiri\User[] $users
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Student whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Student whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Student whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Student whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Student whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Student whereUpdatedAt($value)
  */
 class Student extends Model
 {
@@ -47,5 +60,9 @@ class Student extends Model
     public function performances()
     {
         return $this->hasMany(Performance::class);
+    }
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'meetings');
     }
 }

@@ -18,6 +18,26 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Query\Builder|\Jiri\Meeting withTrashed()
  * @method static \Illuminate\Database\Query\Builder|\Jiri\Meeting withoutTrashed()
  * @mixin \Eloquent
+ * @property int $id
+ * @property \Carbon\Carbon|null $created_at
+ * @property \Carbon\Carbon|null $updated_at
+ * @property \Carbon\Carbon|null $deleted_at
+ * @property int $user_id
+ * @property int $student_id
+ * @property int $event_id
+ * @property string|null $start_time
+ * @property string|null $end_time
+ * @property float|null $general_evaluation
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Meeting whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Meeting whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Meeting whereEndTime($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Meeting whereEventId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Meeting whereGeneralEvaluation($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Meeting whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Meeting whereStartTime($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Meeting whereStudentId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Meeting whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Meeting whereUserId($value)
  */
 class Meeting extends Model
 {

@@ -18,6 +18,24 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Query\Builder|\Jiri\Implementation withTrashed()
  * @method static \Illuminate\Database\Query\Builder|\Jiri\Implementation withoutTrashed()
  * @mixin \Eloquent
+ * @property int $id
+ * @property \Carbon\Carbon|null $created_at
+ * @property \Carbon\Carbon|null $updated_at
+ * @property \Carbon\Carbon|null $deleted_at
+ * @property int $project_id
+ * @property int $student_id
+ * @property int $event_id
+ * @property string|null $url_project
+ * @property string|null $url_repo
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Implementation whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Implementation whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Implementation whereEventId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Implementation whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Implementation whereProjectId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Implementation whereStudentId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Implementation whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Implementation whereUrlProject($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Implementation whereUrlRepo($value)
  */
 class Implementation extends Model
 {

@@ -143,6 +143,9 @@ Route::get('/students/{student}/meetings', function (\Jiri\Student $student) {
 Route::get('/students/{student}/performances', function (\Jiri\Student $student) {
     return $student->performances;
 });
+Route::get('/students/{student}/users', function (\Jiri\Student $student) {
+    return $student->users;
+});
 
 // Users
 Route::get('/users', function () {
@@ -154,6 +157,10 @@ Route::get('/users/{user}', function (\Jiri\User $user) {
 Route::get('/users/{user}/meetings', function (\Jiri\User $user) {
     return $user->meetings;
 });
+Route::get('/users/{user}/students', function (\Jiri\User $user) {
+    return $user->students;
+});
+
 
 // Weights
 Route::get('/weights', function () {

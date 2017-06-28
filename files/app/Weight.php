@@ -16,6 +16,20 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Query\Builder|\Jiri\Weight withTrashed()
  * @method static \Illuminate\Database\Query\Builder|\Jiri\Weight withoutTrashed()
  * @mixin \Eloquent
+ * @property int $id
+ * @property \Carbon\Carbon|null $created_at
+ * @property \Carbon\Carbon|null $updated_at
+ * @property \Carbon\Carbon|null $deleted_at
+ * @property float $weight
+ * @property int $project_id
+ * @property int $event_id
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Weight whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Weight whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Weight whereEventId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Weight whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Weight whereProjectId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Weight whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Weight whereWeight($value)
  */
 class Weight extends Model
 {

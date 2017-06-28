@@ -17,6 +17,18 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Query\Builder|\Jiri\Project withTrashed()
  * @method static \Illuminate\Database\Query\Builder|\Jiri\Project withoutTrashed()
  * @mixin \Eloquent
+ * @property int $id
+ * @property \Carbon\Carbon|null $created_at
+ * @property \Carbon\Carbon|null $updated_at
+ * @property \Carbon\Carbon|null $deleted_at
+ * @property string $name
+ * @property string|null $description
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Project whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Project whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Project whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Project whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Project whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\Project whereUpdatedAt($value)
  */
 class Project extends Model
 {
