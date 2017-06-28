@@ -69,6 +69,8 @@ La cote finale de l’étudiant se calcule en deux étapes :
     
     - __COTE__ = 0.1 * __CV__ + 0.1 * __CSSZG__ + 0.1 * __ART__ + 0.2 * __PF__ + 0.3 * __CR__ + 0.2 * __EG__
 
+La cote finale calculée automatiquement n’est pas forcément la cote finale de l’étudiant qui se trouvera dans le bulletin de l’étudiant. En effet, si après le calcul par l’application, les membres du jury s’accordent oralement pour dire que celui-ci a créé une cote artificiellement élevée ou basse par rapport à l’estimation globale qu’ils ont des compétences de l’étudiant, il doit être possible d’encoder une cote finale manuellement. Par défaut, c’est la cote calculée qui est utilisée, mais on peut en ajouter une manuellement qui sera prise en compte à la place de la cote calculée. Naturellement, le professeur doit pouvoir voir tant le résultat du calcul que la cote mise manuellement.
+
 #### En plus
 
 Pour la préparation d’une épreuve, l’application doit permettre d’imprimer :
@@ -81,8 +83,6 @@ Pour la préparation d’une épreuve, l’application doit permettre d’imprim
 À tout moment, le professeur doit pouvoir monitorer ce qui se passe. Sa page d’accueil sur l’application reprendra donc une vue d’ensemble des cotes déjà encodées. La meilleure forme pour ce faire est un tableau qui croise les étudiants avec les membres du jury. Le but est de permettre au professeur de savoir où on en est dans l’avancement de l’épreuve. Cette vue est à réaliser impérativement, c’est la plus utile.
 
 Différentes vues supplémentaires sont possibles en plus de la vue générale décrite au paragraphe précédent. Le professeur peut choisir un étudiant dans l’interface et voir : sa cote finale calculée par l’application ; le détail du calcul ; un résumé des cotes des différents jurys pour un travail particulier ; un résumé des cotes mises par un membre du jury à un étudiant particulier ; une vue d’ensemble des cotes mises par un membre du jury à tous les étudiants qu’il a rencontré ; les commentaires associés à chaque cote et éventuellement, recliquer sur le lien d’un travail d’un étudiant pour le remontrer aux jurys. On peut encore imaginer d’autres vues, mais ce sont sans doute les plus utiles.
-
-La cote finale calculée automatiquement n’est pas forcément la cote finale de l’étudiant qui se trouvera dans le bulletin de l’étudiant. En effet, si après le calcul par l’application, les membres du jury s’accordent oralement pour dire que celui-ci a créé une cote artificiellement élevée ou basse par rapport à l’estimation globale qu’ils ont des compétences de l’étudiant, il doit être possible d’encoder une cote finale manuellement. Par défaut, c’est la cote calculée qui est utilisée, mais on peut en ajouter une manuellement qui sera prise en compte à la place de la cote calculée. Naturellement, le professeur doit pouvoir voir tant le résultat du calcul que la cote mise manuellement.
 
 Lorsqu’il le souhaite (par exemple lorsqu’il est de retour à la maison), le professeur peut imprimer un document (idéalement PDF et/ou Excel, mais au minimum, via des feuilles de styles adaptées à l’impression) récapitulatif des cotes configuré selon ses besoins :
 
