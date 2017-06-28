@@ -48,6 +48,31 @@ class CreateForeignKeys extends Migration
                 ->onDelete('restrict')
                 ->onUpdate('cascade');
         });
+        Schema::table('implementations', function (Blueprint $table) {
+            $table->foreign('event_id')->references('id')->on('events')
+                ->onDelete('restrict')
+                ->onUpdate('cascade');
+        });
+        Schema::table('weights', function (Blueprint $table) {
+            $table->foreign('event_id')->references('id')->on('events')
+                ->onDelete('restrict')
+                ->onUpdate('cascade');
+        });
+        Schema::table('weights', function (Blueprint $table) {
+            $table->foreign('project_id')->references('id')->on('projects')
+                ->onDelete('restrict')
+                ->onUpdate('cascade');
+        });
+        Schema::table('performances', function (Blueprint $table) {
+            $table->foreign('event_id')->references('id')->on('events')
+                ->onDelete('restrict')
+                ->onUpdate('cascade');
+        });
+        Schema::table('performances', function (Blueprint $table) {
+            $table->foreign('student_id')->references('id')->on('students')
+                ->onDelete('restrict')
+                ->onUpdate('cascade');
+        });
     }
 
     /**
@@ -77,6 +102,21 @@ class CreateForeignKeys extends Migration
         });
         Schema::table('scores', function (Blueprint $table) {
             $table->dropForeign('scores_implementation_id_foreign');
+        });
+        Schema::table('implementations', function (Blueprint $table) {
+            $table->dropForeign('implementations_event_id_foreign');
+        });
+        Schema::table('weights', function (Blueprint $table) {
+            $table->dropForeign('weights_event_id_foreign');
+        });
+        Schema::table('weights', function (Blueprint $table) {
+            $table->dropForeign('weights_project_id_foreign');
+        });
+        Schema::table('performances', function (Blueprint $table) {
+            $table->dropForeign('performances_event_id_foreign');
+        });
+        Schema::table('performances', function (Blueprint $table) {
+            $table->dropForeign('performances_student_id_foreign');
         });
     }
 }

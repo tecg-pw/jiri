@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->softDeletes();
             $table->tinyInteger('is_admin')->unsigned();
             $table->string('name');
+            $table->string('company')->nullable();
             $table->string('email')->unique();
             $table->string('password');
             $table->rememberToken();

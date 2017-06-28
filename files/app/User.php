@@ -11,6 +11,12 @@ use Illuminate\Notifications\Notifiable;
  *
  * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
  * @mixin \Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Jiri\Meeting[] $meetings
+ * @method static bool|null forceDelete()
+ * @method static \Illuminate\Database\Query\Builder|\Jiri\User onlyTrashed()
+ * @method static bool|null restore()
+ * @method static \Illuminate\Database\Query\Builder|\Jiri\User withTrashed()
+ * @method static \Illuminate\Database\Query\Builder|\Jiri\User withoutTrashed()
  */
 class User extends Authenticatable
 {

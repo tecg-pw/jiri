@@ -22,6 +22,7 @@ class CreateMeetingsTable extends Migration
             $table->integer('event_id')->unsigned();
             $table->timestamp('start_time')->nullable();
             $table->timestamp('end_time')->nullable();
+            $table->float('general_evaluation')->unsigned()->nullable();
         });
     }
 

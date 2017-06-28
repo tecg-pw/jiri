@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddEventIdToImplementationsTable extends Migration
+class CreateWeightsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,12 @@ class AddEventIdToImplementationsTable extends Migration
      */
     public function up()
     {
-        Schema::table('implementations', function (Blueprint $table) {
+        Schema::create('weights', function (Blueprint $table) {
+            $table->increments('id');
+            $table->timestamps();
+            $table->softDeletes();
+            $table->float('weight');
+            $table->integer('project_id')->unsigned();
             $table->integer('event_id')->unsigned();
         });
     }
@@ -25,8 +30,6 @@ class AddEventIdToImplementationsTable extends Migration
      */
     public function down()
     {
-        Schema::table('implementations', function (Blueprint $table) {
-            $table->dropColumn('event_id');
-        });
+        Schema::dropIfExists('weights');
     }
 }

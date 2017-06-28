@@ -5,6 +5,19 @@ namespace Jiri;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * Jiri\Project
+ *
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Jiri\Event[] $events
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Jiri\Implementation[] $implementations
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Jiri\Weight[] $weights
+ * @method static bool|null forceDelete()
+ * @method static \Illuminate\Database\Query\Builder|\Jiri\Project onlyTrashed()
+ * @method static bool|null restore()
+ * @method static \Illuminate\Database\Query\Builder|\Jiri\Project withTrashed()
+ * @method static \Illuminate\Database\Query\Builder|\Jiri\Project withoutTrashed()
+ * @mixin \Eloquent
+ */
 class Project extends Model
 {
     public $timestamps = true;
@@ -14,7 +27,8 @@ class Project extends Model
      * @var array
      */
     protected $fillable = [
-        'name'
+        'name',
+        'description'
     ];
     protected $table = 'projects';
 
@@ -28,6 +42,11 @@ class Project extends Model
 
     public function events()
     {
-        return $this->hasManyThrough(Event::class, Implementation::class);
+        return $this->belongsToMany(Event::class, 'weights');
+    }
+
+    public function weights()
+    {
+        return $this->hasMany(Weight::class, 'project_id');
     }
 }

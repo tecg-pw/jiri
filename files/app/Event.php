@@ -30,8 +30,22 @@ class Event extends Model
 
     public function implementations()
     {
-        return $this->hasMany(Implementation::class, 'project_id');
+        return $this->hasMany(Implementation::class, 'event_id');
     }
 
+    public function weights()
+    {
+        return $this->hasMany(Weight::class, 'event_id');
+    }
+
+    public function projects()
+    {
+        return $this->belongsToMany(Project::class, 'weights');
+    }
+
+    public function performances()
+    {
+        return $this->hasMany(Performance::class);
+    }
 
 }

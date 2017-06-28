@@ -18,6 +18,7 @@ class CreateStudentsTable extends Migration
             $table->timestamps();
             $table->softDeletes();
             $table->string('name');
+            $table->string('email')->unique();
         });
     }
 

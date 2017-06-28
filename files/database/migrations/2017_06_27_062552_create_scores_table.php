@@ -19,6 +19,8 @@ class CreateScoresTable extends Migration
             $table->softDeletes();
             $table->integer('meeting_id')->unsigned();
             $table->integer('implementation_id')->unsigned();
+            $table->float('score')->unsigned()->nullable();
+            $table->text('comment')->nullable();
         });
     }
 

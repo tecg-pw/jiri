@@ -6,20 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Jiri\Meeting
+ * Jiri\Performance
  *
  * @property-read \Jiri\Event $event
- * @property-read \Illuminate\Database\Eloquent\Collection|\Jiri\Score[] $scores
  * @property-read \Jiri\Student $student
- * @property-read \Jiri\User $user
  * @method static bool|null forceDelete()
- * @method static \Illuminate\Database\Query\Builder|\Jiri\Meeting onlyTrashed()
+ * @method static \Illuminate\Database\Query\Builder|\Jiri\Performance onlyTrashed()
  * @method static bool|null restore()
- * @method static \Illuminate\Database\Query\Builder|\Jiri\Meeting withTrashed()
- * @method static \Illuminate\Database\Query\Builder|\Jiri\Meeting withoutTrashed()
+ * @method static \Illuminate\Database\Query\Builder|\Jiri\Performance withTrashed()
+ * @method static \Illuminate\Database\Query\Builder|\Jiri\Performance withoutTrashed()
  * @mixin \Eloquent
  */
-class Meeting extends Model
+class Performance extends Model
 {
     public $timestamps = true;
     /**
@@ -28,10 +26,10 @@ class Meeting extends Model
      * @var array
      */
     protected $fillable = [
-        'start_time',
-        'end_time'
+        'calculated_score',
+        'manual_score'
     ];
-    protected $table = 'meetings';
+    protected $table = 'performances';
 
     use SoftDeletes;
     protected $dates = ['deleted_at'];
@@ -39,16 +37,6 @@ class Meeting extends Model
     public function student()
     {
         return $this->belongsTo(Student::class);
-    }
-
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
-
-    public function scores()
-    {
-        return $this->hasMany(Score::class);
     }
 
     public function event()

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProjectsTable extends Migration
+class CreatePerformancesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,14 @@ class CreateProjectsTable extends Migration
      */
     public function up()
     {
-        Schema::create('projects', function (Blueprint $table) {
+        Schema::create('performances', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
             $table->softDeletes();
-            $table->string('name');
-            $table->text('description')->nullable();
+            $table->float('calculated_score')->nullable();
+            $table->float('manual_score')->nullable();
+            $table->integer('event_id')->unsigned();
+            $table->integer('student_id')->unsigned();
         });
     }
 
@@ -29,6 +31,6 @@ class CreateProjectsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('projects');
+        Schema::dropIfExists('performances');
     }
 }

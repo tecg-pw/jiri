@@ -5,6 +5,20 @@ namespace Jiri;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * Jiri\Implementation
+ *
+ * @property-read \Jiri\Event $event
+ * @property-read \Jiri\Project $project
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Jiri\Score[] $scores
+ * @property-read \Jiri\Student $student
+ * @method static bool|null forceDelete()
+ * @method static \Illuminate\Database\Query\Builder|\Jiri\Implementation onlyTrashed()
+ * @method static bool|null restore()
+ * @method static \Illuminate\Database\Query\Builder|\Jiri\Implementation withTrashed()
+ * @method static \Illuminate\Database\Query\Builder|\Jiri\Implementation withoutTrashed()
+ * @mixin \Eloquent
+ */
 class Implementation extends Model
 {
     public $timestamps = true;
