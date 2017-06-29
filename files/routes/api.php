@@ -41,8 +41,21 @@ Route::get('/events/{event}/weights', function (\Jiri\Event $event) {
 Route::get('/events/{event}/performances', function (\Jiri\Event $event) {
     return $event->performances;
 });
-Route::get('/events/{event}/students', function (\Jiri\Event $event) {
-    return $event->students;
+Route::get('/events/{event}/students', function (Request $request, \Jiri\Event $event) {
+    // Let's try something fun and useful…
+    // Let's return an event + its students and their performance for the event
+
+    if ($request->has('embed')) {
+        if ($request->input('embed') === 'performances') {
+            return $event->with([
+                'students.performances' => function ($query) use ($event) {
+                    $query->where('event_id', '=', $event->id);
+                }
+            ])->find($event->id);
+        }
+    } else {
+        return $event->students;
+    }
 });
 Route::get('/events/{event}/users', function (\Jiri\Event $event) {
     return $event->users;
