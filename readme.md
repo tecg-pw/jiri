@@ -102,7 +102,9 @@ _Idéalement_, un modèle de développement qui abstrait l’accès aux données
 
 Si vous choisissez de faire une API REST, n’oubliez pas qu’elle doit être stateless, donc que nous ne pouvez pas compter sur de la persistance côté serveur et que donc, vous devez renvoyer systématiquement des informations qui identifient le contexte de votre requête, comme par exemple, l’identifiant de l’événement _jury_ en cours.
 
-Le(s) client(s) doi(ven)t pouvoir fonctionner sans JS, mais ne pas enrichir l’expérience de JS sera une cause de malus.
+Dans les fichiers associés à ce repo, j’ai introduit un exemple de ce type d’architecture. Une route Web dispatche une requête vers une route d’API pour récupérer les infos d’un événements, en y incluant les étudiants concernés et la cote finale manuelle obtenue (une occasion aussi de voir un cas d’eager loading).
+
+Dernier point, basique mais important, le(s) client(s) doi(ven)t pouvoir fonctionner sans JS, mais ne pas enrichir l’expérience de JS sera une cause de malus.
 
 ### Aides
 
