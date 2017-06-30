@@ -58,14 +58,14 @@ class UsersTableSeeder extends Seeder
             'name' => 'Mariam Faso',
             'email' => 'mariam@faso.be',
             'password' => Hash::make('azerty'),
-            'company' => ''
+            'company' => null
         ]);
         \Jiri\User::create([
             'is_admin' => 0,
             'name' => 'Vincent De Oliveira',
             'email' => 'vincent@oliveira.fr',
             'password' => Hash::make('azerty'),
-            'company' => ''
+            'company' => null
         ]);
         \Jiri\User::create([
             'is_admin' => 0,
@@ -79,7 +79,7 @@ class UsersTableSeeder extends Seeder
             'name' => 'Molly Holzschlag',
             'email' => 'me@molly.com',
             'password' => Hash::make('azerty'),
-            'company' => ''
+            'company' => null
         ]);
         \Jiri\User::create([
             'is_admin' => 0,
@@ -93,7 +93,7 @@ class UsersTableSeeder extends Seeder
             'name' => 'Taylor Otwell',
             'email' => 'taylor@laravel.com',
             'password' => Hash::make('azerty'),
-            'company' => ''
+            'company' => null
         ]);
         \Jiri\User::create([
             'is_admin' => 0,
@@ -115,6 +115,34 @@ class UsersTableSeeder extends Seeder
             'email' => 'anne-marie@csiangleur.be',
             'password' => Hash::make('azerty'),
             'company' => 'CSIA'
+        ]);
+        \Jiri\User::create([
+            'is_admin' => 0,
+            'name' => 'Matt Stauffer',
+            'email' => 'matt@stauffer.com',
+            'password' => Hash::make('azerty'),
+            'company' => null
+        ]);
+        \Jiri\User::create([
+            'is_admin' => 0,
+            'name' => 'Jeffrey Zeldman',
+            'email' => 'jeffrey@ala.com',
+            'password' => Hash::make('azerty'),
+            'company' => 'A list apart'
+        ]);
+        \Jiri\User::create([
+            'is_admin' => 0,
+            'name' => 'Jason Santa Maria',
+            'email' => 'jason@santa-maria.com',
+            'password' => Hash::make('azerty'),
+            'company' => null
+        ]);
+        \Jiri\User::create([
+            'is_admin' => 0,
+            'name' => 'Jeremy Keith',
+            'email' => 'jeremey@clearleft.com',
+            'password' => Hash::make('azerty'),
+            'company' => 'clearleft'
         ]);
     }
 }

@@ -671,6 +671,86 @@ class MeetingsTableSeeder extends Seeder
             'end_time' => null,
             'general_evaluation' => 12
         ]);
+Jiri\Meeting::create([
+            'user_id' => 3,
+            'student_id' => 2,
+            'event_id' => 2,
+            'start_time' => null,
+            'end_time' => null,
+            'general_evaluation' => null
+        ]);
+Jiri\Meeting::create([
+            'user_id' => 3,
+            'student_id' => 5,
+            'event_id' => 2,
+            'start_time' => null,
+            'end_time' => null,
+            'general_evaluation' => null
+        ]);
+Jiri\Meeting::create([
+            'user_id' => 3,
+            'student_id' => 8,
+            'event_id' => 2,
+            'start_time' => null,
+            'end_time' => null,
+            'general_evaluation' => null
+        ]);
+Jiri\Meeting::create([
+            'user_id' => 15,
+            'student_id' => 5,
+            'event_id' => 2,
+            'start_time' => null,
+            'end_time' => null,
+            'general_evaluation' => null
+        ]);
+Jiri\Meeting::create([
+            'user_id' => 15,
+            'student_id' => 8,
+            'event_id' => 2,
+            'start_time' => null,
+            'end_time' => null,
+            'general_evaluation' => null
+        ]);
+Jiri\Meeting::create([
+            'user_id' => 5,
+            'student_id' => 2,
+            'event_id' => 2,
+            'start_time' => null,
+            'end_time' => null,
+            'general_evaluation' => null
+        ]);
+Jiri\Meeting::create([
+            'user_id' => 5,
+            'student_id' => 5,
+            'event_id' => 2,
+            'start_time' => null,
+            'end_time' => null,
+            'general_evaluation' => null
+        ]);
+Jiri\Meeting::create([
+            'user_id' => 5,
+            'student_id' => 8,
+            'event_id' => 2,
+            'start_time' => null,
+            'end_time' => null,
+            'general_evaluation' => null
+        ]);
+Jiri\Meeting::create([
+            'user_id' => 6,
+            'student_id' => 8,
+            'event_id' => 2,
+            'start_time' => null,
+            'end_time' => null,
+            'general_evaluation' => null
+        ]);
+Jiri\Meeting::create([
+            'user_id' => 7,
+            'student_id' => 2,
+            'event_id' => 2,
+            'start_time' => null,
+            'end_time' => null,
+            'general_evaluation' => null
+        ]);
 
     }
 }

@@ -38,5 +38,8 @@ class ProjectsTableSeeder extends Seeder
         \Jiri\Project::create([
             'name' => 'Pré-production du PFE',
         ]);
+        \Jiri\Project::create([
+            'name' => 'Jiri',
+        ]);
     }
 }

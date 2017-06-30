@@ -41,5 +41,20 @@ class WeightsTableSeeder extends Seeder
             'project_id' => 6,
             'event_id' => 1,
         ]);
+        \Jiri\Weight::create([
+            'weight' => 3,
+            'project_id' => 7,
+            'event_id' => 3,
+        ]);
+        \Jiri\Weight::create([
+            'weight' => 3,
+            'project_id' => 8,
+            'event_id' => 3,
+        ]);
+        \Jiri\Weight::create([
+            'weight' => 4,
+            'project_id' => 10,
+            'event_id' => 3,
+        ]);
     }
 }

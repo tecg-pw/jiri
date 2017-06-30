@@ -61,5 +61,20 @@ class PerformancesTableSeeder extends Seeder
             'student_id' => 10,
             'event_id' => 1
         ]);
+\Jiri\Performance::create([
+            'manual_score' => null,
+            'student_id' => 2,
+            'event_id' => 2
+        ]);
+\Jiri\Performance::create([
+            'manual_score' => null,
+            'student_id' => 5,
+            'event_id' => 2
+        ]);
+\Jiri\Performance::create([
+            'manual_score' => null,
+            'student_id' => 8,
+            'event_id' => 2
+        ]);
     }
 }
