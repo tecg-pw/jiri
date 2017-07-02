@@ -15,7 +15,7 @@ class StudentsTableSeeder extends Seeder
         \Jiri\Student::create(['name' => 'Anton Krupicka', 'email' => 'anton@kupricka.com']);
         \Jiri\Student::create(['name' => 'Emelie Forsberg', 'email' => 'emelie@forsberg.com']);
         \Jiri\Student::create(['name' => 'Jim Walmsley', 'email' => 'jim@walmsley.com']);
-        \Jiri\Student::create(['name' => 'Caroline Chevrot', 'email' => 'caroline@chevrot.com']);
+        \Jiri\Student::create(['name' => 'Caroline Chaverot', 'email' => 'caroline@chaverot.com']);
         \Jiri\Student::create(['name' => 'Luis Alberto Hernando', 'email' => 'luis@hernando.com']);
         \Jiri\Student::create(['name' => 'François Dhaene', 'email' => 'francois@dhaene.com']);
         \Jiri\Student::create(['name' => 'Sébastien Chaigneau', 'email' => 'seb@chaigneau.com']);

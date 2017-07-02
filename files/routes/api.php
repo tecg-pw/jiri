@@ -26,8 +26,21 @@ Route::get('/events', function () {
 Route::get('/events/{event}', function (\Jiri\Event $event) {
     return $event;
 });
-Route::get('/events/{event}/projects', function (\Jiri\Event $event) {
-    return $event->projects;
+Route::get('/events/{event}/projects', function (Request $request, \Jiri\Event $event) {
+    // Let's try something fun and useful…
+    // Let's return an event + its students and their performance for the event
+
+    if ($request->has('embed')) {
+        if ($request->input('embed') === 'weights') {
+            return $event->with([
+                'projects.weights' => function ($query) use ($event) {
+                    $query->where('event_id', '=', $event->id);
+                }
+            ])->find($event->id);
+        }
+    } else {
+        return $event->projects;
+    }
 });
 Route::get('/events/{event}/meetings', function (\Jiri\Event $event) {
     return $event->meetings;
@@ -60,6 +73,10 @@ Route::get('/events/{event}/students', function (Request $request, \Jiri\Event $
 Route::get('/events/{event}/users', function (\Jiri\Event $event) {
     return $event->users;
 });
+Route::get('/events/{event}/owner', function (\Jiri\Event $event) {
+    return $event->owner;
+});
+
 
 // Implementations
 Route::get('/implementations', function () {
@@ -178,6 +195,9 @@ Route::get('/users/{user}/meetings', function (\Jiri\User $user) {
 });
 Route::get('/users/{user}/students', function (\Jiri\User $user) {
     return $user->students;
+});
+Route::get('/users/{user}/events', function (\Jiri\User $user) {
+    return $user->events;
 });
 
 

@@ -20,6 +20,7 @@ class CreateEventsTable extends Migration
             $table->string('course_name', 255);
             $table->string('academic_year', 11);
             $table->tinyInteger('exam_session')->unsigned();
+            $table->integer('user_id')->unsigned();
         });
     }
 

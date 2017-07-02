@@ -35,6 +35,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @mixin \Eloquent
  * @property-read \Illuminate\Database\Eloquent\Collection|\Jiri\Student[] $students
  * @property-read \Illuminate\Database\Eloquent\Collection|\Jiri\User[] $users
+ * @property-read \Jiri\User $owner
  */
 class Event extends Model
 {
@@ -89,4 +90,8 @@ class Event extends Model
         return $this->belongsToMany(User::class, 'meetings')->distinct('user_id');
     }
 
+    public function owner()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

@@ -38,6 +38,7 @@ use Illuminate\Notifications\Notifiable;
  * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\User wherePassword($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\User whereRememberToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\Jiri\User whereUpdatedAt($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Jiri\Event[] $events
  */
 class User extends Authenticatable
 {
@@ -74,8 +75,14 @@ class User extends Authenticatable
     {
         return $this->hasMany(Meeting::class);
     }
+
     public function students()
     {
         return $this->belongsToMany(Student::class, 'meetings');
+    }
+
+    public function events()
+    {
+        return $this->hasMany(Event::class, 'user_id');
     }
 }
