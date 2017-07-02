@@ -137,15 +137,12 @@ Route::get('/projects/{project}', function (\Jiri\Project $project) {
     return $project;
 });
 Route::get('/projects/{project}/implementations', function (\Jiri\Project $project) {
-    // Return the events in which the project has been used for evaluation
     return $project->implementations;
 });
 Route::get('/projects/{project}/events', function (\Jiri\Project $project) {
-    // Return the events in which the project has been used for evaluation
     return $project->events;
 });
 Route::get('/projects/{project}/weights', function (\Jiri\Project $project) {
-    // Return the events in which the project has been used for evaluation
     return $project->weights;
 });
 
@@ -154,15 +151,12 @@ Route::get('/scores', function () {
     return \Jiri\Score::all();
 });
 Route::get('/scores/{score}', function (\Jiri\Score $score) {
-    // Return the events in which the project has been used for evaluation
     return $score;
 });
 Route::get('/scores/{score}/implementation', function (\Jiri\Score $score) {
-    // Return the events in which the project has been used for evaluation
     return $score->implementation;
 });
 Route::get('/scores/{score}/meeting', function (\Jiri\Score $score) {
-    // Return the events in which the project has been used for evaluation
     return $score->meeting;
 });
 
