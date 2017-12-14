@@ -26,31 +26,13 @@ Route::get('/events', function () {
 Route::get('/events/{event}', function (\Jiri\Event $event) {
     return $event;
 });
-Route::get('/events/{event}/projects', function (Request $request, \Jiri\Event $event) {
-    // Let's try something fun and useful…
-    // Let's return an event + its students and their performance for the event
-
-    if ($request->has('embed')) {
-        if ($request->input('embed') === 'weights') {
-            return $event->with([
-                'projects.weights' => function ($query) use ($event) {
-                    $query->where('event_id', '=', $event->id);
-                }
-            ])->find($event->id);
-        }
-    } else {
-        return $event->projects;
-    }
-});
 Route::get('/events/{event}/meetings', function (\Jiri\Event $event) {
     return $event->meetings;
 });
 Route::get('/events/{event}/implementations', function (\Jiri\Event $event) {
     return $event->implementations;
 });
-Route::get('/events/{event}/weights', function (\Jiri\Event $event) {
-    return $event->weights;
-});
+
 Route::get('/events/{event}/performances', function (\Jiri\Event $event) {
     return $event->performances;
 });
@@ -142,9 +124,7 @@ Route::get('/projects/{project}/implementations', function (\Jiri\Project $proje
 Route::get('/projects/{project}/events', function (\Jiri\Project $project) {
     return $project->events;
 });
-Route::get('/projects/{project}/weights', function (\Jiri\Project $project) {
-    return $project->weights;
-});
+
 
 // Scores
 Route::get('/scores', function () {
@@ -192,19 +172,4 @@ Route::get('/users/{user}/students', function (\Jiri\User $user) {
 });
 Route::get('/users/{user}/events', function (\Jiri\User $user) {
     return $user->events;
-});
-
-
-// Weights
-Route::get('/weights', function () {
-    return \Jiri\Weight::all();
-});
-Route::get('/weights/{weight}', function (\Jiri\Weight $weight) {
-    return $weight;
-});
-Route::get('/weights/{weight}/event', function (\Jiri\Weight $weight) {
-    return $weight->event;
-});
-Route::get('/weights/{weight}/project', function (\Jiri\Weight $weight) {
-    return $weight->project;
 });

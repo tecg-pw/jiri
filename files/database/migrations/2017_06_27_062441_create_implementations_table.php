@@ -22,6 +22,8 @@ class CreateImplementationsTable extends Migration
             $table->integer('event_id')->unsigned();
             $table->string('url_project')->nullable();
             $table->string('url_repo')->nullable();
+            $table->tinyInteger('weight')->default(0)->unsigned();
+
         });
     }
 
