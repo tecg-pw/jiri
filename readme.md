@@ -32,15 +32,13 @@ Le membre du jury n’est pas obligé de remplir les deux champs en même temps,
 
 Le professeur prépare le jury et acte sa délibération lorsqu’il est fini. Pendant le jury, il peut agir comme un membre du jury classique. L’interface lui propose donc les fonctions disponibles pour le membre du jury classique plus quelques autres. Par défaut, par contre, son interface lui affiche l’état actuel du jury (les cotes déjà attribuées par les membres du jury aux étudiants qu’ils ont vu), ce qui lui permet de monitorer l’avancement du jury (du push via websockets semble être la solution ici).
 
-Lorsqu’il prépare un jury, le professeur doit tout d’abord créer une nouvelle épreuve. Identifier l’épreuve permettra à plusieurs professeurs de créer différentes épreuves au fil des années. Une épreuve se caractérise au minimum par le nom du jury et la date.  
+Lorsqu’il prépare un jury, le professeur doit tout d’abord créer une nouvelle épreuve. Identifier l’épreuve permettra à plusieurs professeurs de créer différentes épreuves au fil des années. Une épreuve se caractérise au minimum par le nom du jury et ses informations temporelles (date, durée).  
 
 Quand il construit l’épreuve, le professeur doit ajouter des étudiants (avec une photo éventuelle) à celle-ci. L’ajout des étudiants doit être facilité par une auto-complétion si l’étudiant est déjà dans la base de données ou créer un nouvel étudiant si ce n’est pas le cas. 
 
 Le professeur doit aussi ajouter des membres du jury à l’épreuve (nom, email, infos pour la connection, photo éventuelle), et cette création est assistée, comme pour les étudiants, par une auto-complétion si le membre du jury a déjà été ajouté lors d’une épreuve précédente, car certains membres du jury reviennent plusieurs années de suite. 
 
-Quand des étudiants ont quitté l’école ou que certains membres de jury ne souhaitent plus participer à l’avenir, il serait peu pratique que la fonction d’auto-complétion continue de les proposer. Mais il serait aussi dommage de perdre la trace des épreuves passées. C’est pourquoi les suppressions se feront toutes en _soft-delete_. C’est ainsi qu’on rendra actifs ou inactifs des éléments de la base de données.
-
-Bien sûr, le professeur peut constamment éditer ces informations. Les formulaires restent donc ouverts et sont seulement équipés d’un bouton d’enregistrement, voire d’une fonction d’enregistrement automatique.
+Quand des étudiants ont quitté l’école ou que certains membres de jury ne souhaitent plus participer à l’avenir, il serait peu pratique que la fonction d’auto-complétion continue de les proposer. Mais il serait aussi dommage de perdre la trace des épreuves passées. On gèrera donc un système d'archivage et aussi un système de consolidation de l'épreuve, ce qui signifie qu'une fois une épreuve finie, un document récapitulatif complet de celle-ci, figé, devra être produit. 
 
 Le professeur doit aussi ajouter à l’épreuve les projets que doivent réaliser les étudiants avec une courte explication. Par défaut, tous les projets sont associés à tous les étudiants, mais le professeur peut en supprimer du programme d’un étudiant si un étudiant a une dispense partielle. S’il a les les urls du site et du repo, il les encode ainsi que la pondération éventuellement différente de la pondération par défaut, que peut avoir un travail particulier pour un étudiant particulier. 
 
