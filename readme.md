@@ -1,12 +1,12 @@
 # Jiri
 
-_Jiri_ est une application qui permet de tenir un jury. Par exemple, les cours de _Design Web_ du 2ème bloc et de _Projets Web_ du 3ème bloc du bachelier en infographie organisé à la Haute École de la Province de Liège se concluent par des jurys lors desquels les travaux des étudiants sont évalués par des externes.
+_Jiri_ est une application web qui permet de tenir un jury. Par exemple, les cours de _Design Web_ et de _Projets Web_ du bachelier en infographie organisé à la Haute École de la Province de Liège se concluent par des jurys lors desquels les travaux des étudiants sont évalués par des externes.
 
 ## Le contexte
 
-Chaque année, des intervenants externes sont invités à venir rencontrer les étudiants des cours de _Design Web_ et de _Projets Web_, et à leur donner par la même occasion un feedback sur leurs réalisations ainsi qu’une cote. 
+Chaque année, des intervenants externes sont invités par l'équipe pédagogique à venir rencontrer les étudiants des cours de _Design Web_ et de _Projets Web_, et à leur donner par la même occasion un feedback oral sur leurs réalisations ainsi qu’une cote destinée au professeur afin de procéder, en fin de jury, à la délibération. 
 
-Jusqu’à ce jour, la procédure habituelle a consisté à donner aux membres du jury des feuilles reprenant chacune le nom d’un étudiant, éventuellement son heure de passage, le nom du jury et la liste des réalisations, et à leur demander de noter, pour chaque réalisation, une cote et des commentaires. Ils notent également sur ces feuilles un commentaire global et une cote globale concernant le profil et le niveau de compétence de l’étudiant tel qu’ils l’ont perçu à travers les réalisations examinées. À la fin de la journée, à l’aide de ces notes, les membres du jury délibèrent pour obtenir un consensus sur les qualités des travaux de chaque étudiant et en tirer une cote finale.
+Jusqu’à ce jour, la procédure habituelle a consisté à donner aux membres du jury des feuilles reprenant chacune le nom d’un étudiant, éventuellement son heure de passage, le nom du jury et la liste des réalisations, et à leur demander de noter, pour chaque réalisation, une cote et des commentaires. Ils notent également sur ces feuilles un commentaire global et une cote globale concernant le profil et le niveau de compétence de l’étudiant tel qu’ils l’ont perçu à travers les réalisations examinées et les ressources associées comme par exemple, le dépôt de code ou le figma préparatoire. À la fin de la journée, à l’aide de ces notes, les membres du jury délibèrent pour obtenir un consensus sur les qualités des travaux de chaque étudiant et en tirer une cote finale.
 
 Vous pouvez voir, en suivant les liens suivants, divers exemples des documents concernés, tels qu’utilisés cette année au jury de Design Web B2 de première session :
 
@@ -60,7 +60,7 @@ La cote finale de l’étudiant se calcule en deux étapes :
     - __EG__ = (__EG__ du jury1 + __EG__ du jury2 + __EG__ du jury3 + __EG__ du jury4 + __EG__ du jury5 + __EG__ du jury6 + __EG__ du jury7 ) / 7
 
 2. La cote finale est la moyenne pondérée des cotes moyennes pour chaque travail. Par exemple, si on a décidé que le __CV__, __CSSZG__, __ART__ valaient chacun pour 2/20 des points, __PF__ pour 4/20 des points, __CR__ pour 6/20 des points, il reste 4/20 des points __EG__ et la cote finale sera calculée comme suit :
-    
+   
     - __COTE__ = 0.1 * __CV__ + 0.1 * __CSSZG__ + 0.1 * __ART__ + 0.2 * __PF__ + 0.3 * __CR__ + 0.2 * __EG__
 
 La cote finale calculée automatiquement n’est pas forcément la cote finale qui se trouvera dans le bulletin de l’étudiant. En effet, si après le calcul par l’application, les membres du jury s’accordent oralement pour dire que celui-ci a créé une cote artificiellement élevée ou basse par rapport à l’estimation globale qu’ils ont des compétences de l’étudiant, il doit être possible d’encoder une cote finale manuellement. Par défaut, c’est la cote calculée qui est utilisée, mais on peut en ajouter une manuellement qui sera prise en compte à la place de la cote calculée. Naturellement, le professeur doit pouvoir voir tant le résultat du calcul que la cote mise manuellement.
